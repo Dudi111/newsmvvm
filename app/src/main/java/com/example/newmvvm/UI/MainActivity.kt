@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelLazy
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.newmvvm.R
@@ -12,12 +13,16 @@ import com.example.newmvvm.data.Article
 import com.example.newmvvm.repository.mainRepo
 import com.example.newmvvm.viewmodel.mainvwmodel
 import com.example.newmvvm.viewmodel.viewmodelfactory
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
+import javax.inject.Inject
 
-
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity(),NewsListener {
 
+    @Inject
    lateinit var reposit:mainRepo
+   @Inject
     lateinit var factory:viewmodelfactory
     lateinit var  viewModel:mainvwmodel
     var newsdata=ArrayList<Article>()
@@ -26,8 +31,8 @@ class MainActivity : AppCompatActivity(),NewsListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-       reposit= mainRepo()
-        factory=viewmodelfactory(reposit)
+     //  reposit= mainRepo()
+      //  factory=viewmodelfactory(reposit)
         viewModel= ViewModelProviders.of(this,factory).get(mainvwmodel::class.java)
         setadapter()
         viewModel.callapi()
