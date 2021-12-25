@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.detailActivity">
+
+    <ImageView
+        android:id="@+id/imgdetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="skdfhkgf"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="24dp"
+        android:textSize="29sp"
+        android:layout_marginTop="30dp"
+        android:textColor="#f2f2f2"
+        android:id="@+id/tvtitle2"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="skdfhkgf"
+        android:layout_below="@+id/tvtitle2"
+        android:layout_marginTop="64dp"
+        android:layout_marginStart="24dp"
+        android:textSize="20sp"
+        android:textColor="#f2f2f2"
+        android:id="@+id/tvtitle3"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="skdfhkgf"
+        android:layout_below="@+id/tvtitle3"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:textSize="14sp"
+        android:textColor="#bababa"
+        android:id="@+id/tvdisc"/>
+
+
+</RelativeLayout>
